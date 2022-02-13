@@ -1,4 +1,4 @@
-package day41_exceptions.Employee;
+package day43_Abstraction.Employee;
 //instance variables
 public abstract class Person {
     private String name;

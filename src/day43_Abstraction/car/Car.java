@@ -1,6 +1,6 @@
-package day41_exceptions.Car;
-
+package day43_Abstraction.car;
 public abstract class Car {
+
     private final String brand, model;
     private String color;
     private final int year;
@@ -10,12 +10,12 @@ public abstract class Car {
         this.brand = brand;
         this.model = model;
         setColor(color);
-        setPrice(price);
 
-        if(year<1886){
-            throw new RuntimeException("invalid year");
+        if(year < 1886){
+            throw new RuntimeException("Invalid Year: "+year);
         }
         this.year = year;
+        setPrice(price);
     }
 
     public String getBrand() {
@@ -30,10 +30,6 @@ public abstract class Car {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public int getYear() {
         return year;
     }
@@ -42,17 +38,25 @@ public abstract class Car {
         return price;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public void setPrice(double price) {
-        if(price <=0){
-            throw new RuntimeException("Price is invalid");
+
+        if(price <= 0){
+            throw new RuntimeException("Invalid price: "+price);
         }
+
         this.price = price;
     }
 
-    public void stop(){
-        System.out.println("press brake");
+    public  void stop(){
+        System.out.println("Press the brake");
     }
+
     public abstract void start();
+
 
     @Override
     public String toString() {
@@ -64,4 +68,6 @@ public abstract class Car {
                 ", price=" + price +
                 '}';
     }
+
+
 }

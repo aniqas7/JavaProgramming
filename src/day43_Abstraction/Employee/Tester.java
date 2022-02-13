@@ -1,4 +1,4 @@
-package day41_exceptions.Employee;
+package day43_Abstraction.Employee;
 
 public final class Tester extends Employee {
     //add constructor, use super because we are calling parent class constructor

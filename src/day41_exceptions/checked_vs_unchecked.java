@@ -42,5 +42,7 @@ public static void main(String[] args) {
 
     //FileInputStream file= new FileInputStream("path of the file");
 
+    System.out.println("Java".charAt(1000)); // unchecked
+
 }
 }

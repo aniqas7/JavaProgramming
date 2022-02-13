@@ -55,7 +55,27 @@ public class TryCatchBlocks {
             System.out.println("cat");
         }
 
-        System.out.println(2/0);
+        try {
+            FileInputStream file= new FileInputStream("file path");
+            System.out.println("try");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("catch");
+        }
+        System.out.println("does it print");
+
+        try {
+            System.out.println("try".substring(2, 4));
+            System.out.println("try exectued");
+        }
+        catch (ArithmeticException e){
+            System.out.println("catch executed");
+            e.printStackTrace();
+        }
+        finally {
+            System.out.println("finally block"); //prints finally block but not next print statement, did it terminate
+        }
+        System.out.println("this is printing");
 
     }
 }
